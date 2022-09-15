@@ -1,0 +1,87 @@
+ipconfig  / ifconfig (ip확인)
+
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt install fonts-unfonts-nanum (글꼴다운)
+
+apt install nabi
+apt install im-config
+
+부팅하는법 - sudo shutdown(reboot)
+
+라즈베리파이 고정 ip 설정하기 - vi /etc/dhcpcd.conf => eth0, wlan0 에 대해서
+//vi 명령어 사용 시 오류나면 nano
+$sudo vi /etc/dhcpcd.conf
+
+...
+interface eth0
+static ip_address=<IP address>/24    //괄호 적지말고 아이피 주소 숫자 적기
+static routers=255.255.255.0
+static domain_name_servers=<DNS>  //괄호 적지말고 DNS 주소 숫자 적기
+
+sudo password root
+
+sudo apt install python3-pip python3-dev
+sudo pip3 install jupyterlab
+
+cd .jupyter   // 나가는 법 -> exit() 입력
+
+python3
+
+
+from notebook.auth import passwd
+passwd()
+비밀번호입력 1 (0394)
+비밀번호입력 2 (0394)
+sha`:암호화된 비밀번호 출력됨
+exit()
+
+sudo nano jupyter_lab_config.py
+내부내용확인
+
+c.NotebookApp.allow_origin='*'     //외부접속가능
+c.NotebookApp.ip='*'	        //아이피 모두허용
+c.NotebookApp.port=8888          //포트설정
+c.NotebookApp.password='아르곤2:패스워드'
+c.NotebookApp.notebook_dir='/home/bready(?)/workspace'
+
+jupyter lab    //서버접속
+
+
+!pip -V
+!pip install update
+!jupyter --version
+
+contents = soup.find_all(class_='title')
+
+test0914bot
+
+telegram
+BotFather - /newbot - ???_bot
+https://api.telegram.org/bot<token>/getUpdates
+채팅아이디, 토큰 필수
+id = 5777133725
+token = 5730278636:AAGgxB4fo2BQ6C0NzdHpFmjc9EycP1K_5ZA
+
+라즈베리파이에서 설치
+npm i node-telegram-bot-api
+
+npmjs.com에서 패키지 
+Node.js Telegram Bot API
+Usage 복사
+
+api용 토큰 입력
+
+nodejs RegExp 정규식 설치방법
+정규식에러-
+npm install regexp
+
+---------------------------------------------------
+
+raspi-gpio
+
+cat /sys/class/thermal/thermal_zone0/temp
+/opt/vc/bin/vcgencmd measure_temp
+
+https://github.com/eleparts/RPi_I2C_LCD_driver
